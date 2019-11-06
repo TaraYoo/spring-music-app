@@ -14,7 +14,7 @@ node {
     SPRING_APP = "spring-music-app"
     APPLICATION_NAME = "${BUILD_USER_FIRST_NAME}-${SPRING_APP}"
     DEPLOY_SPACE = "Development"
-    PCF_ORG = "my_first_workshop"
+    PCF_ORG = "TaraYoo_csnpworkshop02"
     ARTIFACT_URL = "http://3.17.145.188:8081/artifactory/chicago-workshop/"
     SONARQUBE_ENDPOINT = "http://18.188.152.100:9000"
     PCF_ENDPOINT = "https://api.run.pivotal.io"
@@ -30,9 +30,9 @@ node {
       ],
       [
       $class          : 'UsernamePasswordMultiBinding',
-      credentialsId   : 'my_pcf_user',
+      credentialsId   : 'yootar@gmail.com',
       passwordVariable: 'PCF_PASSWORD',
-      usernameVariable: 'PCF_USERNAME'
+      usernameVariable: 'yootar@gmail.com'
       ],[
       $class          : 'UsernamePasswordMultiBinding',
       credentialsId   : 'my_art_user',
@@ -56,7 +56,7 @@ node {
         env.ART_USERNAME = ART_USERNAME
         env.ART_PASSWORD = ART_PASSWORD
         env.SONARQUBE_TOKEN = SONARQUBE_TOKEN
-    
+
   // ------------------------------- Run Jenkins Stages (Steps) ------------------------------------------------
       // Download our Spring Application Artifacts from Artifactory
       stage("Pull Spring Music Artifacts") {
